@@ -1,0 +1,28 @@
+﻿<Window x:Class="ServicesSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ignore="http://www.ignore.com"
+        mc:Ignorable="d ignore"
+        Height="545.821"
+        Width="726.866"
+        Title="MVVM Light Application"
+        DataContext="{Binding Main, Source={StaticResource Locator}}">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Skins/MainSkin.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid x:Name="LayoutRoot">
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="32,25,0,0" TextWrapping="Wrap" Text="{Binding FileName, Mode=TwoWay}" VerticalAlignment="Top" Width="366"/>
+        <Button Content="Pick File" Command="{Binding GetFile}" HorizontalAlignment="Left" Margin="436,25,0,0" VerticalAlignment="Top" Width="75"/>
+
+
+
+    </Grid>
+</Window>
